@@ -156,7 +156,7 @@ jobs:
       - name: Build Database
         run: npx flarekit build --filter="@flarekit/database"
 
-      - name: Deploy to @flarekit/backend
+      - name: Deploy to @flarekit/todo-app
         uses: cloudflare/wrangler-action@v3
         with:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
