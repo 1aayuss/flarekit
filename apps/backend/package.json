@@ -6,7 +6,7 @@
     "preview": "wrangler dev --test-scheduled --persist-to=../../.wrangler/.test/state --port=8000 --inspector-port=9230 --show-interactive-dev-session=false",
     "deploy": "wrangler deploy",
     "test": "vitest run",
-    "pretest:coverage": "rm -rf coverage",
+    "pretest:coverage": "rimraf -rf coverage",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest"
   },
@@ -18,6 +18,7 @@
     "@cloudflare/vitest-pool-workers": "^0.6.4",
     "@cloudflare/workers-types": "^4.20250109.0",
     "@types/node": "^22.10.7",
+    "rimraf": "^6.0.1",
     "typescript": "^5.7.3",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^2.1.8",
