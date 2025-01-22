@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
+    "preview": "wrangler pages dev --persist-to=../../.wrangler/.test/state --port=7002 --inspector-port=9231 --show-interactive-dev-session=false",
     "astro": "astro",
     "db:generate": "drizzle-kit generate",
     "db:migrate:prod": "wrangler d1 migrations apply todo-app-d1 --remote",
