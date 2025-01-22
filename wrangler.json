@@ -17,11 +17,5 @@
       "migrations_table": "astro_migrations",
       "migrations_dir": "./migrations"
     }
-  ],
-  "r2_buckets": [
-    {
-      "binding": "STORAGE",
-      "bucket_name": "flarekit-storage"
-    }
   ]
 }

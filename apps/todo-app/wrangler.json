@@ -18,11 +18,5 @@
       "migrations_dir": "./migrations"
     }
   ],
-  "r2_buckets": [
-    {
-      "binding": "STORAGE",
-      "bucket_name": "flarekit-storage"
-    }
-  ],
   "pages_build_output_dir": "./dist"
 }
