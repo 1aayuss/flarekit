@@ -153,11 +153,11 @@ jobs:
       - name: Setup Wrangler
         run: npm run setup
 
-      - name: Build Database
-        run: npx flarekit build --filter="@flarekit/database"
-
-      - name: List files in dist
-        run: ls -la apps/todo-app/dist
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: web-dist
+          path: './apps/todo-app/dist'
         
       - name: Deploy to @flarekit/todo-app
         uses: cloudflare/wrangler-action@v3
