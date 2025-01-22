@@ -92,7 +92,7 @@ jobs:
       - name: Archive web artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: todo-app
+          name: todo-app-dist
           path: ./apps/todo-app/dist
           # Or archive multiple if you have more apps
 
@@ -156,7 +156,7 @@ jobs:
       - name: Download build artifacts
         uses: actions/download-artifact@v4
         with:
-          name: web-dist
+          name: todo-app-dist
           path: './apps/todo-app/dist'
         
       - name: Deploy to @flarekit/todo-app
