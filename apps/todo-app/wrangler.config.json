@@ -1,5 +1,5 @@
 {
   "$schema": "../../node_modules/wrangler/config-schema.json",
-  "name": "flarekit-web",
+  "name": "flarekit-todoapp",
   "pages_build_output_dir": "./dist"
 }

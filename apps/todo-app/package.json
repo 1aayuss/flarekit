@@ -1,5 +1,5 @@
 {
-  "name": "@flarekit/todo-app",
+  "name": "@flarekit/todoapp",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
