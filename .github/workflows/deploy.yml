@@ -2,9 +2,9 @@ name: Deploy to Cloudflare Infrastructure
 
 on:
   push:
-    branches: ['main']
+    branches: ['dev']
   pull_request:
-    branches: ['main']
+    branches: ['dev']
 
 jobs:
   lint:
@@ -203,4 +203,42 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           workingDirectory: ./apps/backend
+          command: deploy
+
+  deploy_todo:
+    runs-on: ubuntu-24.04
+    needs: [migrate]
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Use Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        with:
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Setup Wrangler
+        run: npm run setup
+
+      - name: Build Database
+        run: npx flarekit build --filter="@flarekit/database"
+
+      - name: Deploy to @flarekit/backend
+        uses: cloudflare/wrangler-action@v3
+        with:
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          workingDirectory: ./apps/todo-app
           command: deploy

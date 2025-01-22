@@ -1,0 +1,21 @@
+---
+import TodoApp from "../components/TodoApp";
+let res;
+const { baseURL } = Astro.locals;
+
+const fetchTodos = async () => {
+    const data = await fetch(`${baseURL}/api/todos.json`);
+    res = await data.json();
+};
+  
+await fetchTodos();
+---
+
+<html>
+  <head>
+    <title>Todo App</title>
+  </head>
+  <body>
+    <TodoApp res={res} client:load />
+  </body>
+</html>

@@ -41,7 +41,7 @@ export const createStorageRecord = async (
 };
 
 /**
- * Retrieves a storage record from the database using the key.
+ * Retrieves a storage re9cord from the database using the key.
  * @param key - The key of the storage record.
  * @param db - The Drizzle database instance.
  * @returns The storage record if found, otherwise null.
