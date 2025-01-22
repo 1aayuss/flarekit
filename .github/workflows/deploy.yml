@@ -92,8 +92,8 @@ jobs:
       - name: Archive web artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: web-dist
-          path: ./apps/web/dist
+          name: todo-app
+          path: ./apps/todo-app/dist
           # Or archive multiple if you have more apps
 
   migrate:
