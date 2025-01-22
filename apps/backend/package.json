@@ -6,7 +6,7 @@
     "preview": "wrangler dev --test-scheduled --persist-to=../../.wrangler/.test/state --port=8000 --inspector-port=9230 --show-interactive-dev-session=false",
     "deploy": "wrangler deploy",
     "test": "vitest run",
-    "pretest:coverage": "rm -rf coverage",
+    "pretest:coverage": "rimraf -rf coverage",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest"
   },

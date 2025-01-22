@@ -23,7 +23,7 @@
     "build:migrations": "drizzle-kit generate",
     "build:distribution": "npm run clean && rollup --config",
     "test": "vitest run",
-    "pretest:coverage": "rm -rf coverage",
+    "pretest:coverage": "rimraf -rf coverage",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest"
   },
