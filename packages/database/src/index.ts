@@ -16,7 +16,6 @@ export const initDBInstance = (reference: object, env: Env) => {
     instance = {
       db,
       cache: env.CACHE,
-      queue: env.QUEUE,
     };
     drizzleDBMap.set(reference, instance);
   }

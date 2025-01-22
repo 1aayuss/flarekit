@@ -7,7 +7,6 @@ export const onRequest = defineMiddleware(async (context, next) => {
   const { url } = context.request;
   const urlObject = new URL(url);
   context.locals.baseURL = `${urlObject.protocol}//${urlObject.host}`;
-  console.log(`baseURL--- : ${context.locals.baseURL}`);
   // return a Response or the result of calling `next()`
   return next();
 });

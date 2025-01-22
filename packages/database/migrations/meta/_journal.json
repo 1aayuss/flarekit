@@ -15,6 +15,13 @@
       "when": 1737475673972,
       "tag": "0001_watery_impossible_man",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1737548540304,
+      "tag": "0002_illegal_the_call",
+      "breakpoints": true
     }
   ]
 }
