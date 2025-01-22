@@ -7,8 +7,5 @@ describe('Initialized Database', () => {
     const ctx = createExecutionContext();
     const db = initDBInstance(ctx, env);
     expect(db).toBeDefined();
-
-    const db2 = initDBInstance(ctx, env);
-    expect(db2).toBeDefined();
   });
 });

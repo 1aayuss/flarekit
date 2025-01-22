@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "wrangler pages dev --persist-to=../../.wrangler/.test/state --port=7002 --inspector-port=9231 --show-interactive-dev-session=false",
+    "preview": "wrangler pages dev --persist-to=../../.wrangler/.test/state --port=7001 --inspector-port=9231 --show-interactive-dev-session=false",
     "astro": "astro",
     "db:generate": "drizzle-kit generate",
     "db:migrate:prod": "wrangler d1 migrations apply flarekit-demo --remote",
