@@ -24,13 +24,5 @@
       "bucket_name": "flarekit-storage"
     }
   ],
-  "queues": {
-    "producers": [
-      {
-        "binding": "QUEUE",
-        "queue": "flarekit-queue"
-      }
-    ]
-  },
   "pages_build_output_dir": "./dist"
 }
