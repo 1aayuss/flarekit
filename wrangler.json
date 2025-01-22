@@ -6,14 +6,14 @@
   "kv_namespaces": [
     {
       "binding": "CACHE",
-      "id": "d06fcc7d24994be0a8caeb16280079ac"
+      "id": "eab0a4023f994104b5db97b4b6a93bf6"
     }
   ],
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "flarekit-d1",
-      "database_id": "07245e83-0bbd-4459-8322-ba1c28a617ac",
+      "database_name": "flarekit-demo",
+      "database_id": "e6d29234-a3aa-454e-8c4d-200a7c2f0ad4",
       "migrations_table": "astro_migrations",
       "migrations_dir": "./migrations"
     }
