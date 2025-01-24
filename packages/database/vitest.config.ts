@@ -4,8 +4,8 @@ import {
   readD1Migrations,
 } from '@cloudflare/vitest-pool-workers/config';
 import { dirname, join } from 'node:path';
-import { fileURLToPath } from 'url';
 import { configDefaults } from 'vitest/config';
+import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 

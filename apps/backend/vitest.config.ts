@@ -5,7 +5,7 @@ import {
   readD1Migrations,
 } from '@cloudflare/vitest-pool-workers/config';
 import { dirname, join } from 'node:path';
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const assetsPath = join(__dirname, 'test', 'assets');
